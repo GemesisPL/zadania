@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+public class Exercise {
+    public static void main(String[] args) {
+        startQuiz();
+    }
+    public static void startQuiz() {
+        int score = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        //Question 1
+        System.out.println("Which primitive types represents integral numbers?");
+        System.out.println("a. int,float,short,long");
+        System.out.println("b. int,short,byte,double");
+        System.out.println("c. int,byte,short,long");
+        System.out.println("d. float,long,short,byte");
+        System.out.println();
+        System.out.println("Enter your choice: ");
+
+        String answer1 = scanner.nextLine();
+
+        switch (answer1) {
+            case "a","b","d" -> System.out.println("Incorrect!");
+            case "c" -> {
+                System.out.println("Correct!");
+                score++;
+            }
+            default -> System.out.println("Answer not available!");
+        }
+        //Question 2
+        System.out.println("Assuming x is int variable, how to correctly write 'if' statement?");
+        System.out.println("a. if(1) {}");
+        System.out.println("b. if(x=1) {}");
+        System.out.println("c. if(x==true) {}");
+        System.out.println("d. if(x==1) {}");
+        System.out.println();
+        System.out.println("Enter your choice: ");
+
+        String answer2 = scanner.nextLine();
+
+        switch (answer2) {
+            case "b","c","d" -> System.out.println("Incorrect!");
+            case "a" -> {
+                System.out.println("Correct!");
+                score++;
+            }
+            default -> System.out.println("Answer not available!");
+        }
+        //Question 3
+        System.out.println("String is not:");
+        System.out.println("a. an object");
+        System.out.println("b. representing text type");
+        System.out.println("c. a primitive types");
+        System.out.println("d. all answers are correct");
+        System.out.println();
+        System.out.println("Enter your choice: ");
+
+        String answer3 = scanner.nextLine();
+
+        switch (answer3) {
+            case "a","b","c" -> System.out.println("Incorrect!");
+            case "d" -> {
+                System.out.println("Correct!");
+                score++;
+            }
+            default -> System.out.println("Answer not available!");
+        }
+        //Question 4
+        System.out.println("What is the size of double type in Java?");
+        System.out.println("a. 8 bit");
+        System.out.println("b. 16 bit");
+        System.out.println("c. 32 bit");
+        System.out.println("d. 64 bit");
+        System.out.println();
+        System.out.println("Enter your choice: ");
+
+        String answer4 = scanner.nextLine();
+
+        switch (answer4) {
+            case "a","b","c" -> System.out.println("Incorrect!");
+            case "d" -> {
+                System.out.println("Correct!");
+                score++;
+            }
+            default -> System.out.println("Answer not available!");
+        }
+        System.out.println("User score: "+ score);
+    }
+}
